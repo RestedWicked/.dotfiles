@@ -75,7 +75,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     fast-syntax-highlighting
-    zsh-autocomplete
+#   zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,5 +111,8 @@ source $ZSH/oh-my-zsh.sh
 alias lsg='eza -l --git -T --header --no-permissions --no-user --icons'
 alias ls='eza -l --header --icons'
 alias lsd='eza -l -T --header --icons -L3'
+
+alias v='fd --type f --hidden | fzf-tmux -p | xargs nvim'
+alias vp='cd $( fd --type d --hidden | fzf-tmux -p )'
 
 eval "$(starship init zsh)"

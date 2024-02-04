@@ -1,0 +1,12 @@
+.git
+.cargo
+.rustup
+.local
+.npm
+.nvm
+.cache
+.bun
+.oh-my-zsh
+dev/compile/
+.vim
+.tmux
