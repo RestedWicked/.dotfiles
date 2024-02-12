@@ -5,8 +5,8 @@
 .npm
 .nvm
 .cache
+.build
 .bun
 .oh-my-zsh
-dev/compile/
 .vim
 .tmux
