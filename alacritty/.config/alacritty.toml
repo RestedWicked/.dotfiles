@@ -1,0 +1,35 @@
+shell = "/bin/zsh"
+live_config_reload = true
+
+[window]
+opacity = 0.75
+title = "Hackin :3"
+dynamic_title = false
+
+[font]
+normal = { family = "ProFont IIx Nerd Font", style ="Regular"}
+size = 14
+
+[colors]
+primary = { foreground = "#fff9eb", background = "#101418"}
+cursor = { text = "#fff9eb", cursor = "#ff0c63"}
+
+[colors.normal]
+black = "#101418"
+red = "#cc094f"
+green = "#149a3b"
+yellow = "#d2b620"
+blue = "#0954cc"
+magenta = "#5734cb"
+cyan = "#0fb894"
+white = "#e0ded7"
+
+[colors.bright]
+black = "#435364"
+red = "#ff0c63"
+green = "#10c74c"
+yellow = "#ffe34d"
+blue = "#0c8aff"
+magenta = "#8661ff"
+cyan = "#b9fff2"
+white = "#fff9eb"

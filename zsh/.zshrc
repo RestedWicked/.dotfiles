@@ -108,12 +108,21 @@ source $ZSH/oh-my-zsh.sh
 
 # User specific environment
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(zoxide init zsh)"
+
+
 alias lsg='eza -l --git -T --header --no-permissions --no-user --icons'
 alias ls='eza -l --header --icons'
 alias lsd='eza -l -T --header --icons -L3'
 
-alias v='fd --type f --hidden | fzf-tmux -p | xargs nvim'
-alias vp='cd $( fd --type d --hidden | fzf-tmux -p )'
+alias pf='fd --type f --hidden | fzf-tmux -p | xargs nvim'
+alias pv='z $( fd --type d --hidden | fzf-tmux -p )'
 
 alias ovim='WICKED_VIM_MODE=OBSIDIAN nvim'
+
+unset zle_bracketed_paste
 eval "$(starship init zsh)"
