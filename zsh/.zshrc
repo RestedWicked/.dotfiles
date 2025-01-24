@@ -121,6 +121,7 @@ alias lsd='eza -l -T --header --icons -L3'
 
 alias pf='fd --type f --hidden | fzf-tmux -p | xargs nvim'
 alias pv='z $( fd --type d --hidden | fzf-tmux -p )'
+alias pvt='tmux-sessionizer'
 
 alias ovim='WICKED_VIM_MODE=OBSIDIAN nvim'
 

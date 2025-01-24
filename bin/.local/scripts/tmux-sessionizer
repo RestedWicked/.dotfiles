@@ -1,22 +1,22 @@
 #!/bin/zsh
 
-if [ $# -eq 1 ]; then
+if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$( fd --type d --hidden | fzf-tmux -p )
+    selected=$( fd . ~/dev --type d --hidden --min-depth 1 --max-depth 1| fzf-tmux -p )
 fi
 
-if [ -z $selected ]; then
+if [[ -z $selected ]]; then
     exit 0
 fi
 
 selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
 
-if [ -z $TMUX ] && [ -z $tmux_running ]; then
-    tmux new-session -s $selected_name -c $selected
+if [[ -z $TMUX ]]; then
+    tmux new-session -As $selected_name -c $selected
     exit 0
 fi
+
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new-session -ds $selected_name -c $selected
